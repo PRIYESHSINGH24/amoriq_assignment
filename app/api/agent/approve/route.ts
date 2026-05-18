@@ -40,7 +40,7 @@ export async function POST(req: Request) {
       try {
         const genAI = new GoogleGenerativeAI(state.geminiApiKey);
         const model = genAI.getGenerativeModel({
-          model: state.activeModel.startsWith("gemini") ? state.activeModel : "gemini-1.5-flash"
+          model: state.activeModel.startsWith("gemini") ? state.activeModel : "gemini-2.5-flash"
         });
 
         const contents = conversationState.contents;

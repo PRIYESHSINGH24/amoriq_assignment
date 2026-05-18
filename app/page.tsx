@@ -38,7 +38,7 @@ export default function Dashboard() {
   // Config States
   const [apiKey, setApiKey] = useState("");
   const [geminiApiKey, setGeminiApiKey] = useState("");
-  const [model, setModel] = useState("gemini-1.5-flash");
+  const [model, setModel] = useState("gemini-2.5-flash");
   const [hasKey, setHasKey] = useState(false);
   const [hasGeminiKey, setHasGeminiKey] = useState(false);
   const [configMsg, setConfigMsg] = useState("");
@@ -436,13 +436,13 @@ export default function Dashboard() {
                 />
               </div>
               <div className="flex gap-2">
-                <select 
+                 <select 
                   value={model}
                   onChange={e => setModel(e.target.value)}
                   className="flex-1 bg-[#09090b] border border-zinc-850 rounded px-2 py-2 text-xs text-white focus:outline-none focus:border-zinc-500 transition-all font-mono"
                 >
-                  <option value="gemini-1.5-flash">gemini-1.5-flash (Primary Default)</option>
-                  <option value="gemini-1.5-pro">gemini-1.5-pro (Reasoning)</option>
+                  <option value="gemini-2.5-flash">gemini-2.5-flash (Primary Default)</option>
+                  <option value="gemini-2.5-pro">gemini-2.5-pro (Reasoning)</option>
                   <option value="gpt-4o-mini">gpt-4o-mini (Fallback)</option>
                   <option value="gpt-4o">gpt-4o (Fallback)</option>
                 </select>

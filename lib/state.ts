@@ -28,7 +28,7 @@ if (!(global as any)[GLOBAL_KEY]) {
     mcpServers: ["http://localhost:4002"],
     openaiApiKey: process.env.OPENAI_API_KEY || "",
     geminiApiKey: process.env.GEMINI_API_KEY || "",
-    activeModel: "gemini-1.5-flash",
+    activeModel: "gemini-2.5-flash",
     sseClients: []
   };
 }

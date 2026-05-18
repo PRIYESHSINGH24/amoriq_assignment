@@ -78,7 +78,7 @@ export async function POST(req: Request) {
         }
 
         const model = genAI.getGenerativeModel({
-          model: state.activeModel.startsWith("gemini") ? state.activeModel : "gemini-1.5-flash",
+          model: state.activeModel.startsWith("gemini") ? state.activeModel : "gemini-2.5-flash",
           tools: functionDeclarations.length > 0 ? [{ functionDeclarations }] : undefined
         });
 
