@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev:next": "next dev",
-    "dev:mcp": "tsx mcp_server/server.ts",
+    "dev:mcp": "nodemon --watch mcp_server --ext ts --exec tsx mcp_server/server.ts",
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:mcp\"",
     "build": "next build",
     "start": "next start"
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0"
+    "@types/react-dom": "^18.3.0",
+    "nodemon": "^3.1.14"
   }
 }
